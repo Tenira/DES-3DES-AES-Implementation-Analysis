@@ -1,0 +1,152 @@
+Encryption and Decryption Demonstration
+============================================================
+
+Implementation Type:
+------------------------------------------------------------
+Custom AES, custom DES, and custom 3DES implementations
+
+Original Plaintext Sample:
+------------------------------------------------------------
+[
+  {
+    "record_id": "9db0bfe3-5930-420f-85cb-0f584a2f5a4e",
+    "timestamp": "2026-05-06T03:19:50.105925",
+    "user": {
+      "user_id": 555654,
+      "username": "uyJw8mSiDe",
+      "email": "qCBQuWiG@example.com",
+      "role": "student",
+      "permissions": [
+        "delete"
+      ]
+    },
+    "session": {
+      "session_id": "KQO72jdeqTDyTNwMbYUpzdTvkk4XWnxf",
+      "ip_address": "125.60.231.209",
+      "device": "tablet",
+      "browser": "Chrome"
+    },
+    "transaction": {
+      "am
+... [output truncated] ...
+
+Custom AES Results
+============================================================
+Ciphertext Sample, Base64 Encoded:
+------------------------------------------------------------
+SIVRMYyokT3xyOR+i3pjnKQGub8bzMirjZMsBzB4/qdwnqc9VMFrjFLoBs8l+gQ0EPFMEk+wWf2oViM2okaNZZrTQnJZM1ONeIsukfmF/0MWUCE/pm++e5AsehJHhMkq05CAXeUs88wtgaklwr+T6dVGzM/kZfkn+u0xgLvPsXbAN/FL90rlvigjymNWSv4hJNT2IXLdTllglNoqWr9mxMoG84MH0XXYCjUYYOIl0qJoYcGdptRxsA13g4jHbMzLR8ud1ygvVPEMXU8s1UyjDnGyMBC9NR/dJGQLWuHvZ8mBYA3rq18rm8VYTIU5OqxlqSESzXzIIzpnjMdRG9Hd3+y2YpDpxYl2C21YaJzsq0dhzhqoB4dJ2T3LAxp0Az9WmEUdUyEYrw+mV8gthZqavJyD1T/tsXqp2UoydNnYWWo30y2oydoJLzPATXkPqnd5AExkM0fabt4bUtzXNpJAQih/DXVZXWFxtYuUCQdhRLWwi9lyzBT7
+... [ciphertext truncated] ...
+
+Recovered Plaintext Sample:
+------------------------------------------------------------
+[
+  {
+    "record_id": "9db0bfe3-5930-420f-85cb-0f584a2f5a4e",
+    "timestamp": "2026-05-06T03:19:50.105925",
+    "user": {
+      "user_id": 555654,
+      "username": "uyJw8mSiDe",
+      "email": "qCBQuWiG@example.com",
+      "role": "student",
+      "permissions": [
+        "delete"
+      ]
+    },
+    "session": {
+      "session_id": "KQO72jdeqTDyTNwMbYUpzdTvkk4XWnxf",
+      "ip_address": "125.60.231.209",
+      "device": "tablet",
+      "browser": "Chrome"
+    },
+    "transaction": {
+      "am
+... [output truncated] ...
+
+Correctness Check:
+------------------------------------------------------------
+PASS: decrypted plaintext matches original plaintext.
+
+Ciphertext Size:
+------------------------------------------------------------
+2064 bytes
+
+Custom DES Results
+============================================================
+Ciphertext Sample, Base64 Encoded:
+------------------------------------------------------------
+Ac7jERRf68tOf0NkyrZEGSThm0NcBeWDMQ9GExZK3R+d0GdZouMGg3l2M7WqNvDAgQH/kz1GwuXZf5+15OOAlPlpknUBjuZ+0T87QS9V5IcvZgdAKMCXlMGnewUqZzr6Hxz42Otn8EfzrUwpKnoc9+H5Rh4hSaVYqH3vEPJMDkkx/Vye0Xn5uyS+iLwxfCfr05RsjIBPET+VQaxpX1RsxfEPY+r9hwZw0qSqYzX69NpClvfZjmUlST2pkayL7LMbC+a85lMo4TvNFkNhvLmE76jK8zPwngBCUXUFNSUCjayLvPT1HmBsSdPoOhI2UgU3WeNdwHmo1qfQk02OPE9r4rZ8ft3uYx+OL/vbOnAgqFseGB7KsfUgsn0iu9dTlCAKMXdRvGx+g/YrfpZyfX7oxhdul67GG4lDRfoWdlJOR3OaMPCHfuH478ff9LlSkHQgGSO+eNQzA+ovaoIcCFhwlllvAaI/nYHEH4o+W3UF65hkozfgGk4d
+... [ciphertext truncated] ...
+
+Recovered Plaintext Sample:
+------------------------------------------------------------
+[
+  {
+    "record_id": "9db0bfe3-5930-420f-85cb-0f584a2f5a4e",
+    "timestamp": "2026-05-06T03:19:50.105925",
+    "user": {
+      "user_id": 555654,
+      "username": "uyJw8mSiDe",
+      "email": "qCBQuWiG@example.com",
+      "role": "student",
+      "permissions": [
+        "delete"
+      ]
+    },
+    "session": {
+      "session_id": "KQO72jdeqTDyTNwMbYUpzdTvkk4XWnxf",
+      "ip_address": "125.60.231.209",
+      "device": "tablet",
+      "browser": "Chrome"
+    },
+    "transaction": {
+      "am
+... [output truncated] ...
+
+Correctness Check:
+------------------------------------------------------------
+PASS: decrypted plaintext matches original plaintext.
+
+Ciphertext Size:
+------------------------------------------------------------
+2056 bytes
+
+Custom 3DES Results
+============================================================
+Ciphertext Sample, Base64 Encoded:
+------------------------------------------------------------
+OlXOAuxeup4cdjmRiTdiEfv8OGTY387AW53SA/E3GKxSk0NlXUGHtUC5kDETqCNGGfmAL94OcvJzLZQ0J/Ejt4ZvGuNKT6q4pa+Ma+ExZN/M+7U5lFzpd2icypyg8D4ijOHCZYoCKY0TNFlfa2jW+e1YkB5S5Yf9mvggzqFZeo93Dh3U0JtMHQYIuUs7BlmdjHpadr5oS5PV+FWnqVPGXH8neyocVtO+O8QnO0HgYCpU50e1Po7Ndyyf90G42DHOVeuJYTXRGHcoaPwsEcZL1WjOEvteCS17OmRl9CbIrLhaeh3mh1JSN1q/VIojGBD1X9KRUlfdmKsYtsFrlbCmhmfP8YUCiHk96ALSe58Z3K2LWLZf/gB3ZL8RfL1b8ReP94D5eiw2KW0YNqUAbkruk74xLpYu+FhoYIuzoIoP9GXY/noKYk/fUCdvQr2DOSYRkWSZAc1qphog2flGxOdgOhWVfCGl8LsTl3id9/WEueoqwaCz7DHm
+... [ciphertext truncated] ...
+
+Recovered Plaintext Sample:
+------------------------------------------------------------
+[
+  {
+    "record_id": "9db0bfe3-5930-420f-85cb-0f584a2f5a4e",
+    "timestamp": "2026-05-06T03:19:50.105925",
+    "user": {
+      "user_id": 555654,
+      "username": "uyJw8mSiDe",
+      "email": "qCBQuWiG@example.com",
+      "role": "student",
+      "permissions": [
+        "delete"
+      ]
+    },
+    "session": {
+      "session_id": "KQO72jdeqTDyTNwMbYUpzdTvkk4XWnxf",
+      "ip_address": "125.60.231.209",
+      "device": "tablet",
+      "browser": "Chrome"
+    },
+    "transaction": {
+      "am
+... [output truncated] ...
+
+Correctness Check:
+------------------------------------------------------------
+PASS: decrypted plaintext matches original plaintext.
+
+Ciphertext Size:
+------------------------------------------------------------
+2056 bytes
+
